@@ -1,0 +1,48 @@
+{
+    "author": "Opkar Ghadu",
+    "name": "QuickNav",
+    "manifest_version" : 3,
+    "version": "1.0.0",
+    "description": "Quicknav is a browser extension that allows you to add keyboard shortcuts to quickly navigate to different pages.",
+    "homepage_url": "https://github.com/OpkarGhadu/quicknav",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "tabs"
+    ],
+    "action": {
+        "default_icon": "icons/icon48.png",
+        "default_title": "QuickNav",
+        "default_popup": "popup/popup.html"
+    }, 
+    "options_ui": {
+        "page": "options/options.html",
+        "open_in_tab": true
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": [
+
+                "scripts/color.js",
+                "scripts/content.js"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker" : "scripts/background.js"
+    },
+    "commands": {
+        "toggle-feature": {
+          "suggested_key": { "default": "Alt+Z" },
+          "description": "Open the QuickNav menu. This is the 'base' of the shortcut"
+        }
+    }    
+
+
+}

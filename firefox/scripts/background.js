@@ -1,3 +1,7 @@
+// Polyfill for browser compatibility
+if (typeof browser === "undefined") {
+  var browser = chrome;
+}
 
 // Open Menu
 function checkKeypress(command){

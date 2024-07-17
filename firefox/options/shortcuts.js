@@ -1,3 +1,9 @@
+// Polyfill for browser compatibility
+if (typeof browser === "undefined") {
+  var browser = chrome;
+}
+
+
 function onError(error) {
     console.log('Shortcuts Error', error);
   }

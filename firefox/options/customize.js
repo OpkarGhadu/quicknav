@@ -1,4 +1,9 @@
 // CUSTOMIZE PAGE 
+// Polyfill for browser compatibility
+if (typeof browser === "undefined") {
+  var browser = chrome;
+}
+
 
 // General Error Message
 function onError(error) {

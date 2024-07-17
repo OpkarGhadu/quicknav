@@ -1,20 +1,12 @@
 
 
-# LINKS
-https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
-
-
-
-
 # TODO
-- turn everything into functions
+- turn everything into function
 - clean up code
 - add comments
 - fix readme to understand workflow
-- test on chrome / make cross platform
-- improve look of options page
-- publish it =D
-
+- publish it =D firefox and chrome
+- promote on reddit, twitter
 
 # About
 
@@ -23,5 +15,10 @@ Quicknav is a browser extension which allows you to very quickly navigate to new
 # Documentation
 
 You can also click
+
+### Note on Browsers
+
+This extension is made with cross browser support in mind. All the code should be compatible across browswers, except for the manifest files.
+The manifest files can be found in the /browsers directory. 
 
 # Support

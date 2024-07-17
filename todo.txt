@@ -8,3 +8,7 @@
 - Close button on popup
 - Let menu be default tab
 - Support more complex ASCII configurations, symbols, squares, etc
+
+
+## NOTE:
+difference between chrome and firefox is content.js, how scrollign is handled

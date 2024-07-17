@@ -1,4 +1,8 @@
 
+// Polyfill for browser compatibility
+if (typeof browser === "undefined") {
+  var browser = chrome;
+}
 
 /*  This file is for the popup, which looks like 
             _____________________
@@ -161,10 +165,10 @@ async function displayPopup() {
           //image.style.objectFit = 'cover';
           
           
+          image.style.width = "auto";
+          image.style.height = "auto";
           image.style.maxWidth = "100%";
-          //image.style.minWidth = "200px";
           
-          //image.style.height = "auto";
           image.style.maxHeight = "100%";
           //image.style.minHeight = "200px";
           
@@ -217,7 +221,7 @@ async function displayPopup() {
   /////////////////////
 
   if(hasImageOrText){
-    popup.style.minWidth = '30%';
+    popup.style.minWidth = '40%';
     popup.style.minHeight = '30%';
     imgOrText.style.width = '50%';
     menuPage.style.width = "50%";
@@ -229,8 +233,8 @@ async function displayPopup() {
   }
   popup.style.width = 'auto';
   popup.style.height = 'auto';
-  popup.style.maxHeight = '80%';
-  popup.style.maxWidth = '80%';
+  popup.style.maxHeight = '50%';
+  //popup.style.maxWidth = '80%';
 
 
   // Close Button///////////////////////////////////////////////////////
@@ -269,11 +273,12 @@ async function displayPopup() {
   header.appendChild(underline);
   header.style.marginBottom = '5px';
 
+  
   // Style Links
   links.style.display = "flex";
   links.style.flexDirection = "column";
   links.style.flexGrow = "1";
-  links.style.overflow = 'scroll';
+  links.style.overflowY = 'auto';
   links.style.scrollbarColor = secondaryColor;
   links.style.scrollbarWidth = 'thin';
   links.style.height = '80%'
