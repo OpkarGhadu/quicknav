@@ -1,0 +1,10 @@
+# Additonal Features to be implemented
+- Open correct customize page when the save button is pressed
+- Open menu with right click
+- Default ASCII Setups
+- 3rd color for ASCII art
+- Let user set height and width and page location of popup
+- Allow user to change shortcut from Alt+Z
+- Close button on popup
+- Let menu be default tab
+- Support more complex ASCII configurations, symbols, squares, etc

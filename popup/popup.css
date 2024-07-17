@@ -1,0 +1,36 @@
+html, body {
+    width: 250px;
+}
+
+button {
+    border: black solid 1px;
+    width: 100%;
+    margin: 3% auto;
+    padding: 4px;
+    text-align: center;
+    font-size: 1em;
+    cursor: pointer;
+    background-color:#bad8a6;
+}
+
+button:hover {
+    background-color:  #6da947;
+}
+
+#version {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#popup-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#popup-header-img {
+    width: 48px;
+    height: 48px;
+}

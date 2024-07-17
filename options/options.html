@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="options.css"/>
+    <title>QuickNav - Options</title>
+
+</head>
+<body id="optionsBody">
+    <header id="options-header">
+        <nav id="options-tabs">
+            <ul>
+                <li id="tab-shortcuts"><a href="#shortcuts" class="tab-link"><span>Shortcuts</span></a></li>
+                <li id="tab-customize"><a href="#customize" class="tab-link"><span>Customize</span></a></li>
+                <li id="tab-about"><a href="#about" class="tab-link"><span>About</span></a></li>
+            </ul>
+        </nav>
+    </header>
+        
+    <!-- SHORTCUTS PAGE -->
+    <div id="shortcuts" class="content">
+        <p>Add a keyboard shortcut, a URL, and a URL name to the destination</p>
+        <i>Ex: 'G', 'Google', 'google.com'</i><br>
+        <input type="text" id="shortcut-input" placeholder="Keyboard Shortcut Key" maxlength="1">
+        <input type="text" id="name-input" placeholder="URL Name">
+        <input type="text" id="url-input" placeholder="URL">
+        <button id="add-entry-button">Add</button>
+        <table id="entry-table">
+            <thead>
+                <tr>
+                    <th>Keyboard Shortcut</th>
+                    <th>URL Name</th>
+                    <th>URL</th> 
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="entry-tbody">
+                <!-- Entries will be added here dynamically -->
+            </tbody>
+        </table>
+        <!-- Currently Autosaving
+            <div id="options-save">
+                <button id="save-button">Save Options</button>
+                <button id="saveClose-button">Save Options and Close</button>
+            </div>
+        -->
+
+    </div>
+    
+    <!-- CUSTOMIZE PAGE -->
+    <div id="customize" class="content">
+        <form>
+        <fieldset>
+            <legend>Image</legend>
+            <label for="addImageToggle">Do you want to add an image or text?</label>
+            <!-- Image Options: Image, Text, None-->
+            <input type="radio" id="addImageToggle" name="imageOptions" value="Image">
+            <label for="addImageToggle">Image</label>
+            
+            <input type="radio" id="addTextToggle" name="imageOptions" value="Text">
+            <label for="addTextToggle">Text</label>
+            
+            <input type="radio" id="addNone" name="imageOptions" value="None" checked>
+            <label for="addNone">None</label>
+            
+            <!-- If user selects image -->
+            <div id="imageInput">
+                <label for="imageFile">Select an image or GIF:</label>
+                <p><span style="color: red;"><b>Warning: </b></span>320kb size limit for images or gifs</p>
+                <input type="file" id="imageFile" accept="image/*">
+                <div class="image-preview">
+                    <p>Image Preview:</p>
+                    <img id="imagePreview" src="" alt="" style="max-width: 300px; max-height: 300px;">
+                </div>
+            </div>
+            <!-- If user selects text -->
+            <div id="textInput">
+                <label for="textInputField">Enter text :</label>
+                <br/>
+                <textarea 
+                    rows="14"
+                    cols="48"
+                    id="textInputField" 
+                    placeholder="Enter your text here."
+                ></textarea>
+            </div>
+
+        </fieldset>
+        <fieldset>
+            <legend>Visual</legend>
+            <label for="backgroundColor">Select a Background Color:</label>
+            <input type="color" id="backgroundColor" name="backgroundColor" value="#251621" />
+            <br/>
+            <label for="textColor">Select a Text Color:</label>
+            <input type="color" id="textColor" name="textColor" value="#d6c8a1" />
+            <br/>
+            <label for="secondaryColor">Select a Secondary Text Color:</label>
+            <input type="color" id="secondaryColor" name="secondaryColor" value="#73a3ad" />
+        </fieldset>
+        <fieldset>
+            <legend>General</legend>
+            <label for="username">Enter a username (optional):</label>
+            <input id="username" type="text" size="60" value="user" />
+            <br/>
+            <label for="timer">How long do you want the menu to appear for (1-20 seconds):</label>
+            <input id="timer" type="number" size="6" value="4" min="1" max="20" />
+            <br/>
+            <label for="shortcut">Keyboard shortcut (<span style="color: red;">NOTE: </span>
+                Currently cannot be changed from 'Alt+Z'):</label>
+            <input type="text" id="keyboardShortcut">
+        </fieldset>
+        <button id="saveCustomize">Save</button>
+        <button id="resetCustomize">Reset</button>
+        
+        </form>
+    </div>
+    
+    <!-- ABOUT PAGE -->
+    <div id="about" class="content">
+        <div>
+            <img src="../icons/icon128.png" alt="" id="header-img">
+            <h2>QuickNav</h2>
+        </div>
+        <div>
+            <p>
+                <a href="opkarghadu.github.io/projects/quicknav" target="_blank">QuickNav</a> is a simple navigation tool designed 
+                to allow you to quickly open new pages.
+            </p>
+            <div>
+                <p><b>Version: </b><span id="aboutVersionNumber"></span></p>
+                <p><b>License: </b><span><a href="https://github.com/OpkarGhadu/quicknav?tab=MIT-1-ov-file#readme" target="_blank">MIT License</a></span></p>
+                <p><b>Author: </b><span><a href="https://opkarghadu.com" target="_blank">Opkar Ghadu</a></span></p>
+                <p><b>Source Code: </b><span><a href="https://github.com/OpkarGhadu/quicknav" target="_blank">Github</a></span></p>
+                <p><b>Documentation: </b><span><a href="https://opkarghadu.github.io/projects/quicknav" target="_blank">Docs</a></span></p>
+                <p><b>Donate: </b><span><a href="https://paypal.me/opkarghadu" target="_blank">Paypal</a></span></p>
+
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- Scripts for the various options subpages -->
+    <script src="../scripts/constants.js"></script>
+    <script src="shortcuts.js"></script>
+    <script src="customize.js"></script>
+    <script src="about.js"></script>
+</body>
+</html>

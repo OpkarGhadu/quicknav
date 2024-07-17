@@ -1,0 +1,91 @@
+
+#optionsBody {
+    font-size: 1rem;
+    width: 800px; /* Fixed width in pixels */
+    max-width: 800px; /* Ensure the max-width is also fixed */
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width */
+}
+
+ /* Add some basic styles */
+ .content {
+    display: none;
+    border: 1px solid black;
+    padding: 1rem 0.5rem;
+}
+.content.active {
+    display: block;
+}
+#options-header {
+    display: flex;
+    align-items: center;
+}
+#options-tabs ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+#options-tabs li {
+    margin-right: 10px;
+}
+#options-tabs a {
+    text-decoration: none;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 5px;
+}
+#options-tabs a.active {
+    background: #ccc;
+}
+
+#options-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#options-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-img {
+    width: 96px;
+    height: 96px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+th {
+    background-color: #f2f2f2;
+}
+button {
+    margin-top: 10px;
+}
+
+fieldset {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+// Shortcuts Page
+
+// Customize Page
+.image-preview {
+    display: none;
+    margin-top: 10px;
+}
+#imageInput, #textInput {
+    display: none;
+}
+// About Page
