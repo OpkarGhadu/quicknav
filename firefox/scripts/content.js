@@ -164,7 +164,6 @@ async function displayPopup() {
           image.alt = 'Please select an image.';
           //image.style.objectFit = 'cover';
           
-          
           image.style.width = "auto";
           image.style.height = "auto";
           image.style.maxWidth = "100%";

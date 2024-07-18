@@ -1,9 +1,26 @@
+// Background script which detects keypresses and opens popup or new tab
+
 // Polyfill for browser compatibility
 if (typeof browser === "undefined") {
   var browser = chrome;
 }
 
-// Open Menu
+
+// Detects shortcut keypress from popup menu
+// and opens new tab using the url of the shortcut
+browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  console.log('Background: Open New Tab');
+  if(message.type === 'keyPressed'){
+    browser.tabs.create({
+      url: message.url
+    });
+  }
+});
+
+
+
+// Detects if user presses key to open popup
+// By default, this is Alt+Z
 function checkKeypress(command){
   console.log('Background: Checking Keypress')
   if (command === "toggle-feature") {
@@ -16,15 +33,3 @@ function checkKeypress(command){
 }
 
 browser.commands.onCommand.addListener(checkKeypress);
-
-// This recieves url from keypress
-//   When keypressed, it sends url
-browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  console.log('Background: Open New Tab');
-  if(message.type === 'keyPressed'){
-    browser.tabs.create({
-      url: message.url
-    });
-  }
-});
-

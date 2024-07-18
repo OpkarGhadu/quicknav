@@ -6,6 +6,7 @@
 - add comments
 - fix readme to understand workflow
 - publish it =D firefox and chrome
+- upload github.io page with same readme
 - promote on reddit, twitter
 
 # About
