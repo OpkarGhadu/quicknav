@@ -1,14 +1,16 @@
-// CUSTOMIZE PAGE 
+// Customize subpage on Options page
+
+
 // Polyfill for browser compatibility
 if (typeof browser === "undefined") {
   var browser = chrome;
 }
 
-
 // General Error Message
 function onError(error) {
   console.log('Customize: Error', error);
 }
+
 
 // Will reset customize page to default values specified in constants.js, then save
 function resetCustomizePage(){
@@ -21,7 +23,6 @@ function resetCustomizePage(){
   document.getElementById('backgroundColor').value = defaultBackgroundColor;
   document.getElementById('textColor').value = defaultTextColor;
   document.getElementById('secondaryColor').value = defaultSecondaryColor;
-  
   // Reset General
   document.getElementById('username').value = defaultUsername;
   document.getElementById('timer').value = defaultTimerLength;
@@ -29,19 +30,18 @@ function resetCustomizePage(){
   saveCustomizePage();
 }
 
+
 // Will save values on customize page to local storage under 'customize'
 function saveCustomizePage(){
-
   // Save Image or Text
   let selectedOption = document.querySelector('input[name="imageOptions"]:checked').value;
   let imageOrTextData = null;
-
+  
   // Save the image if the user selects it
   if(selectedOption === 'Image') {
     const defaultImageSrc = defaultImageUrl;
     const imageFileInput = document.getElementById('imageFile');
-    /* IF statement triggered if user uploads a new file
-        Will read the uploaded file, save it's result, then call saveData */
+
     if (imageFileInput.files.length > 0) {
       const reader = new FileReader();
       reader.onload = function(event) {
@@ -56,15 +56,15 @@ function saveCustomizePage(){
       // Exit the function early to wait for the FileReader to finish
       return; 
     }
-    /* ELSE IF Statement triggered if user does not upload a new file, but the old on remains .
-        This saves the old image despite the input not showing it. Image is sourced from preview instead */
+    // ELSE IF Statement triggered if user does not upload a new file, but the old on remains.
+    // This saves the old image despite the input not showing it as a file. Image is sourced from preview instead
    else if(document.getElementById('imagePreview').src !== '' && document.getElementById('imagePreview').src !== defaultImageSrc) {
       const source = document.getElementById('imagePreview').src ;
       imageOrTextData = {
         type: 'Image',
         data: source,
       };
-      console.log('ImgOrText: Saving existing Image', imageOrTextData); // Log the source of the image
+      console.log('ImgOrText: Saving existing Image', imageOrTextData);
       saveData(imageOrTextData);
     }
     // If no image uploaded despite 'Image' being selected, use the default image
@@ -85,6 +85,8 @@ function saveCustomizePage(){
           type: 'Text',
           data: textInputField
         };
+        console.log('ImgOrText: Saving Text', imageOrTextData); // Log the text data
+        saveData(imageOrTextData);
     }
     // If no text uploaded despite being selected, add default
     else{
@@ -93,7 +95,7 @@ function saveCustomizePage(){
         data: defaultText
       };
     }
-    console.log('ImgOrText: Saving Text', imageOrTextData); // Log the text data
+    console.log('ImgOrText: Saving Default Text', imageOrTextData); // Log the text data
     saveData(imageOrTextData);
   } 
   // If user selects none, save it
@@ -214,8 +216,6 @@ document.getElementById('imageFile').addEventListener('change', function(){
     console.log('Customize: Unsupported File Type');
   }
 });
-
-
 
 
 // Build Page

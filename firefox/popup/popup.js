@@ -1,3 +1,5 @@
+// Popup
+
 // Polyfill for browser compatibility
 if (typeof browser === "undefined") {
   var browser = (typeof chrome !== "undefined") ? chrome : {};
