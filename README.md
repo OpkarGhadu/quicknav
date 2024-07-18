@@ -14,23 +14,6 @@ Quicknav is a browser extension which allows you to very quickly navigate to new
 4. Close the options page and press 'Alt+Z', or the custom shortcut, to open the QuickNav menu. Certain pages, like the default new tab page, do not allow for the menu to be opened. Also, you may need to refresh to page after a save for the functionality to work.
 
 
-### File Structure
-
-browsers/
-firefox/
-- icons/
--    contains the icon in various sizes
-- options/
--    the options menu, along with js files for each subpage
-- popup/
--    the popup when the icon is clicked on the browser menu
-- scripts/
--    background waits for key presses
--    color extracts colors from image
--    constants holds default values
--    content is the actual quicknav menu
-- manifest.json
-
 ### Note on Browsers
 
 This extension is made with cross browser support in mind. All the code should be compatible across browswers, except for the manifest files.

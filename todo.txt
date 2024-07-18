@@ -12,3 +12,21 @@
 
 ## NOTE:
 difference between chrome and firefox is content.js, how scrollign is handled
+
+
+### File Structure
+
+browsers/
+firefox/
+- icons/
+-    contains the icon in various sizes
+- options/
+-    the options menu, along with js files for each subpage
+- popup/
+-    the popup when the icon is clicked on the browser menu
+- scripts/
+-    background waits for key presses
+-    color extracts colors from image
+-    constants holds default values
+-    content is the actual quicknav menu
+- manifest.json
