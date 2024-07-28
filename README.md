@@ -1,12 +1,4 @@
----
-title: 'QuickNav'
-slug: 'quicknav'
-coverImage: '/logos/quicknav.png'
-excerpt: 'A simple yet powerful navigation tool that lets you quickly open new web pages.'
-github: 'https://github.com/opkarghadu/quicknav'
-firefox: 'https://addons.mozilla.org/en-CA/firefox/addon/quicknav/'
-date: "2024-07-15"
----
+# QuickNav 
 
 ## About
 
