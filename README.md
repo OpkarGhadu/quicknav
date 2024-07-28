@@ -1,4 +1,12 @@
-# QuickNav
+---
+title: 'QuickNav'
+slug: 'quicknav'
+coverImage: '/logos/quicknav.png'
+excerpt: 'A simple yet powerful navigation tool that lets you quickly open new web pages.'
+github: 'https://github.com/opkarghadu/quicknav'
+firefox: 'https://addons.mozilla.org/en-CA/firefox/addon/quicknav/'
+date: "2024-07-15"
+---
 
 ## About
 
@@ -23,13 +31,13 @@ This extension is designed with cross-browser support in mind. The code is compa
 
 ## Examples
 
-![preview1](../assets/quicknavPreview1.png)
+![preview1](./assets/quicknavPreview1.png)
 
 
-![preview2](../assets/quicknavPreview2.png)
+![preview2](./assets/quicknavPreview2.png)
 
 
-![preview3](../assets/quicknavPreview3.png)
+![preview3](./assets/quicknavPreview3.png)
 
 ## Support
 
