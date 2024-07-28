@@ -26,6 +26,10 @@ The manifest files can be found in the /browsers directory.
 ![preview2](./assets/quicknavPreview2.png)
 ![preview3](./assets/quicknavPreview3.png)
 
+## Requirements
+
+Firefox 109.0 or higher
+
 ## Support
 
 

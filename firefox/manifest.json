@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "browser_specific_settings": {
         "gecko": {
-            "id": "opkarghadu/quicknav"
+            "id": "quicknav@opkarghadu.com"
         }
     },
     "description": "Quicknav is a browser extension that allows you to add keyboard shortcuts to quickly navigate to different pages.",
