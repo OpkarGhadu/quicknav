@@ -31,6 +31,4 @@ This extension is designed with cross-browser support in mind. The code is compa
 
 ![preview3](./assets/quicknavPreview3.png)
 
-## Support
 
-You can support this project and others by making a donation on PayPal. [[Link]](https://paypal.me/opkarghadu)
